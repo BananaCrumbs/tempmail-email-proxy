@@ -10,7 +10,7 @@ new EmailServer(25, async (emails: Email[]) => {
     
     const body = await encryptMessage(JSON.stringify(emails), pub);
     
-    fetch("https://api.tempmail.lol/v2/addEmail", {
+    fetch("https://api.tempmail.lol/addEmail", {
         method: "POST",
         body: body,
     }).then((res) => {
